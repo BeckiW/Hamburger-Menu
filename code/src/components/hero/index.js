@@ -15,6 +15,9 @@ class Hero extends React.Component {
           </div>
           <ShoutyText className="title" text="A popup tech school. Now in sthlm." />
           <Button className="button" text="Keep me updated" />
+
+
+
         </Grid>
       </div>
     )
