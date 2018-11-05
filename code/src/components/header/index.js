@@ -6,15 +6,30 @@ import "./style.css"
 class Header extends React.Component {
 
   render() {
+
+    const toggleRotation = () => {
+      document.getElementById("hamburger-container").classList.toggle("rotate")
+    }
+
     return (
       <header>
         <Grid className="header-grid">
-          <a href="http://technigo.io">Technigo</a>
-          <a href="http://technigo.io">Boot Camp</a>
-          <a href="http://technigo.io">Stories</a>
-          <a href="http://technigo.io">About</a>
+          <label htmlFor="hamburger" className="con">
+            <div id="hamburger-container" onClick={toggleRotation}>
+              <div className="bar top"></div>
+              <div className="bar middle"></div>
+              <div className="bar bottom"></div>
+            </div>
+          </label>
+          <input id="hamburger" type="checkbox" className="hamburger-checkbox" />
+          <div className="menu">
+            <a href="">Technigo</a>
+            <a href="">Boot Camp</a>
+            <a href="">Stories</a>
+            <a href="">About</a>
+          </div>
         </Grid>
-      </header>
+</header>
     )
   }
 
